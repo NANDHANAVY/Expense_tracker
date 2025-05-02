@@ -5,4 +5,4 @@
                   ├── wsgi.py
 
 
-web: gunicorn expense_tracket.wsgi:application
+web: gunicorn expense_tracker.wsgi
