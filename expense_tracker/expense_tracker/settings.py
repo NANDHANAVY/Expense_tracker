@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'api',  # Custom app for expense tracking
     'rest_framework',  # Django REST framework for building APIs
+    'whitenoise.runserver_nostatic',  # Add this line if it's missing
 ]
 
 MIDDLEWARE = [
@@ -53,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Middleware for serving static files
 ]
 
 ROOT_URLCONF = 'expense_tracker.urls'
